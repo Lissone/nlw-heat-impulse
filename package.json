@@ -1,0 +1,12 @@
+{
+  "name": "nlw-heat-impulse",
+  "version": "1.0.0",
+  "description": "NLW Heat impulse mission",
+  "repository": "https://github.com/Lissone/nlw-heat-impulse.git",
+  "author": "Leonardo Dias Lissone Santomero <leonardo.lissonez@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

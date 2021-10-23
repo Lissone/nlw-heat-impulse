@@ -1,0 +1,9 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Lissone/nlw-heat-impulse.git",
+  "author": "Leonardo Dias Lissone Santomero <leonardo.lissonez@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
