@@ -1,23 +1,28 @@
 import 'dotenv/config'
 import express from 'express'
+import cors from 'cors'
+import http from 'http'
+import { Server } from 'socket.io'
 
 import { apiRoutes } from './routes'
 
 const app = express()
 
+const serverHttp = http.createServer(app)
+
+app.use(cors())
 app.use(express.json())
 
 app.use(apiRoutes)
 
-// apenas para representar fluxo que o front terá que fazer
-app.get('/github', (request, response) => {
-  response.redirect(`https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`)
+const io = new Server(serverHttp, {
+  cors: {
+    origin: '*'
+  }
 })
 
-app.get('/signin/callback', (request, response) => {
-  const { code } = request.query
-
-  return response.json({ code })
+io.on('connect', socket => {
+  console.log(`User connected with socket: ${socket}`)
 })
 
-app.listen(5000, () => console.log(`Server is running on port 5000`))
+export { serverHttp, io }
