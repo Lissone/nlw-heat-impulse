@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "ts-node-dev ."
+    "dev": "ts-node-dev --exit-child ."
   },
   "dependencies": {
     "@prisma/client": "^3.3.0",
