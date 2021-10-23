@@ -1,7 +1,13 @@
 import 'dotenv/config'
 import express from 'express'
 
+import { apiRoutes } from './routes'
+
 const app = express()
+
+app.use(express.json())
+
+app.use(apiRoutes)
 
 // apenas para representar fluxo que o front terá que fazer
 app.get('/github', (request, response) => {
