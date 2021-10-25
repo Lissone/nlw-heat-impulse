@@ -1,48 +1,47 @@
-import styles from './styles.module.scss'
+import { useEffect, useState } from 'react'
 
 import logoImg from '../../assets/logo.svg'
 
+import { api } from '../../services/api'
+
+import styles from './styles.module.scss'
+
+interface IMessage {
+  id: string
+  text: string
+  user: {
+    name: string
+    avatarUrl: string
+  }
+}
+
 export function MessageList() {
+  const [messages, setMessages] = useState<IMessage[]>([])
+
+  useEffect(() => {
+    api.get<IMessage[]>('/messages/last3').then(response => {
+      setMessages(response.data)
+    })
+  }, [])
+
   return (
     <div className={styles.messageListWrapper}>
       <img src={logoImg} alt='DoWhile 2021' />
 
       <ul className={styles.messageList}>
-        <li className={styles.message}>
-          <p className={styles.messageContent}>Não vejo a hora de começar esse evento, com certeza vai ser o melhor de todos os tempos, vamooo pra cima! 🔥🔥</p>
-
-          <div className={styles.messageUser}>
-            <div className={styles.userImage}>
-              <img src='https://github.com/Lissone.png' alt='Leonardo Lissone'/>
+        {messages.map(message => (
+          <li key={message.id} className={styles.message}>
+            <p className={styles.messageContent}>{message.text}</p>
+  
+            <div className={styles.messageUser}>
+              <div className={styles.userImage}>
+                <img src={message.user.avatarUrl} alt={message.user.name}/>
+              </div>
+  
+              <span>{message.user.name}</span>
             </div>
-
-            <span>Leonardo Lissone</span>
-          </div>
-        </li>
-
-        <li className={styles.message}>
-          <p className={styles.messageContent}>Não vejo a hora de começar esse evento, com certeza vai ser o melhor de todos os tempos, vamooo pra cima! 🔥🔥</p>
-
-          <div className={styles.messageUser}>
-            <div className={styles.userImage}>
-              <img src='https://github.com/Lissone.png' alt='Leonardo Lissone'/>
-            </div>
-
-            <span>Leonardo Lissone</span>
-          </div>
-        </li>
-
-        <li className={styles.message}>
-          <p className={styles.messageContent}>Não vejo a hora de começar esse evento, com certeza vai ser o melhor de todos os tempos, vamooo pra cima! 🔥🔥</p>
-
-          <div className={styles.messageUser}>
-            <div className={styles.userImage}>
-              <img src='https://github.com/Lissone.png' alt='Leonardo Lissone'/>
-            </div>
-
-            <span>Leonardo Lissone</span>
-          </div>
-        </li>
+          </li>
+        ))}
       </ul>
     </div>
   )
