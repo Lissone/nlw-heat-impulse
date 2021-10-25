@@ -1,0 +1,22 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  font-family: Roboto, sans-serif;
+}
+
+:root {
+  --yellow-800: #FFCD1E;
+
+  --black-900: #17171A;
+  --black-950: #121214;
+  --black-1000: #09090A;
+
+  --light: #E1E1E6;
+}
+
+body {
+  color: var(--light);
+  background: var(--black-950);
+}
