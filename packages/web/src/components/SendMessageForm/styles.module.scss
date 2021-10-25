@@ -1,0 +1,144 @@
+.sendMessageFormWrapper {
+  padding: 24px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  align-self: center;
+
+  background: var(--black-850);
+}
+
+.signOutButton {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+
+  cursor: pointer;
+  border: 0;
+
+  color: var(--gray-100);
+  background: transparent;
+
+  transition: filter 0.2s;
+
+  &:hover {
+    filter: brightness(.9)
+  }
+}
+
+.userInformation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .userImage {
+    padding: 3px;
+
+    border-radius: 50%;
+    line-height: 0;
+
+    background: linear-gradient(100deg, var(--pink-900) 0%, var(--yellow-800) 100%);
+
+    img {
+      width: 94px;
+      height: 94px;
+
+      border: 6px solid var(--background);
+      border-radius: 50%;
+    }
+  }
+
+  .userName {
+    margin-top: 16px;
+
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .userGithub {
+    margin-top: 8px;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--gray-100);
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+}
+
+.sendMessageForm {
+  margin-top: 48px;
+
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+
+  background: var(--black-800);
+
+  label {
+    padding: 18px 24px;
+
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+
+    background: var(--black-750);
+  }
+
+  textarea {
+    height: 160px;
+    padding: 24px;
+
+    resize: none;
+    border: 0;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    background: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::placeholder {
+      color: var(--gray-300);
+    }
+  }
+
+  button {
+    height: 40px;
+    margin: 24px;
+    padding: 0 32px;
+
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    border: 0;
+    border-radius: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+
+    color: var(--light);
+    background: var(--pink-900);
+
+    transition: filter .2s;
+
+    &:hover {
+      filter: brightness(0.9);
+    }
+  }
+}
