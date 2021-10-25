@@ -22,7 +22,7 @@ const io = new Server(serverHttp, {
 })
 
 io.on('connect', socket => {
-  console.log(`User connected with socket: ${socket}`)
+  console.log(`User connected with socket: ${socket.id}`)
 })
 
 export { serverHttp, io }
