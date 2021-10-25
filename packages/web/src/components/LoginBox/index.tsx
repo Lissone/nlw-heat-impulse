@@ -1,9 +1,12 @@
+import { useContext } from 'react'
 import { VscGithubInverted } from 'react-icons/vsc'
+
+import { AuthContext } from '../../context/auth'
 
 import styles from './styles.module.scss'
 
 export function LoginBox() {
-  const signInUrl = `https://github.com/login/oauth/authorize?scope=user&client_id=${import.meta.env.VITE_GITHUB_CLIENT_ID}`
+  const { signInUrl } = useContext(AuthContext)
 
   return (
     <div className={styles.loginBoxWrapper}>
