@@ -11,7 +11,7 @@ import { UserPhoto } from '../UserPhoto'
 
 import { styles } from './styles'
 
-export function Header(){
+export function Header() {
   return (
     <View style={styles.container}>
       <LogoSvg />
@@ -23,7 +23,7 @@ export function Header(){
           </Text>
         </TouchableOpacity>
 
-        <UserPhoto imageUri='https://github.com/Lissone.png' />
+        <UserPhoto imageUri="https://github.com/Lissone.png" />
       </View>
     </View>
   )
