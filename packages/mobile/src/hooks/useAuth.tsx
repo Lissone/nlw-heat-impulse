@@ -9,9 +9,6 @@ import AsyncStorage from '@react-native-async-storage/async-storage'
 
 import { api } from '../services/api'
 
-const CLIENT_ID = 'f6ac7185757678a3dfa6'
-const SCOPE = 'read:user'
-
 const USER_STORAGE = '@nlwheat:user'
 const TOKEN_STORAGE = '@nlwheat:token'
 
@@ -73,7 +70,7 @@ export function AuthProvider({ children }: AuthProviderProps) {
     try {
       setIsSigning(true)
 
-      const authUrl = `https://github.com/login/oauth/authorize?client_id=${CLIENT_ID}&scope=${SCOPE}`
+      const authUrl = `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}&scope=read:user`
 
       const authSessionResponse = await AuthSession.startAsync({ authUrl }) as AuthorizationResponse
 

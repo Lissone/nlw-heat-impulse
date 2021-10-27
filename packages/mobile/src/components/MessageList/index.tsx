@@ -12,7 +12,7 @@ import { styles } from './styles'
 
 let messagesQueue: IMessage[] = []
 
-const socket = io(String(api.defaults.baseURL))
+const socket = io(String(process.env.BASE_URL_API))
 
 socket.on('new_message', newMessage => {
   messagesQueue.push(newMessage)
