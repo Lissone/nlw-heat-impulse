@@ -7,23 +7,31 @@ import {
 
 import LogoSvg from '../../assets/logo.svg'
 
+import { useAuth } from '../../hooks/useAuth'
+
 import { UserPhoto } from '../UserPhoto'
 
 import { styles } from './styles'
 
 export function Header() {
+  const { user, signOut } = useAuth()
+
   return (
     <View style={styles.container}>
       <LogoSvg />
 
       <View style={styles.logoutButton}>
-        <TouchableOpacity>
-          <Text style={styles.logoutText}>
-            Sair
-          </Text>
+        <TouchableOpacity
+          onPress={signOut}
+        >
+          { user &&
+            <Text style={styles.logoutText}>
+              Sair
+            </Text>
+          }
         </TouchableOpacity>
 
-        <UserPhoto imageUri="https://github.com/Lissone.png" />
+        <UserPhoto imageUri={user?.avatarUrl} />
       </View>
     </View>
   )
