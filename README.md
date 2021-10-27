@@ -184,8 +184,8 @@ expo start
 
 ## Demonstration
 
-<img src="./.github/web_home_demo.png" alt="Home web" width="100%" height="100%"/>
-<img src="./.github/mobile_home_demo.png" alt="Mobile web" width="100%" height="100%"/>
+<img src="./.github/mobile-home-demo.png" alt="Mobile web" />
+<img src="./.github/web-home-demo.png" alt="Home web" />
 
 ## License
 
