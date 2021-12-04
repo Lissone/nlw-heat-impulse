@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="DoWhile 2021" src="./packages/web/src/assets/logo.svg" width="350px">
+  <img alt="DoWhile 2021 logo" src="./packages/web/src/assets/logo.svg" width="350px">
 </h1>
 
 <p align="center">
@@ -31,39 +31,46 @@
 
 ## Description
 
-Website and messaging app to share with the community your expectations for the DoWhile 2021 event, organized by Rocketseat. Developed at NLW Heat on the 2021 impulse trail, developed by Dani Leão on October 17th to 24th, 2021.
+Website and messaging app to share with the community your expectations for the DoWhile 2021 event, organized by Rocketseat. 
+
+Developed at NLW Heat on the 2021 impulse trail, developed by Dani Leão on October 17th to 24th, 2021.
 
 ## Requirements
 
-* [Yarn](https://yarnpkg.com/)
-* [Nodejs](https://nodejs.org/en/)
+- [Nodejs](https://nodejs.org/en/)
+- [Npm](https://www.npmjs.com/)
+- [Yarn](https://yarnpkg.com/)
 
 ## Technologies
 
 ### Backend (Api)
-* Nodejs
-* Typescript
-* Express
-* Prisma
-* Sqlite
-* Socket.io
+
+- Nodejs
+- Typescript
+- Express
+- Prisma
+- Socket.io
+- Sqlite
 
 ### Web
-* Vite
-* React
-* Typescript
-* Sass
-* Socket.io
-* ESLint (Airbnb config)
+
+- React
+- Vite
+- Typescript
+- Sass
+- Socket.io
+- ESLint (Airbnb config)
 
 ### Mobile
-* Expo
-* Typescript
-* StyleSheet
-* AsyncStorage
-* Expo Auth Session
-* Moti
-* Socket.io
+
+- React Native
+- Expo
+- Typescript
+- StyleSheet
+- AsyncStorage
+- Socket.io
+- Expo Auth Session
+- Moti
 
 ## Layout
 
@@ -72,21 +79,25 @@ You can view the project layout via this <a href="https://www.figma.com/file/7HX
 ## Usage
 
 You can clone it on your pc using the command:
+
 ```bash
 git clone https://github.com/Lissone/nlw-heat-impulse.git
 cd nlw-heat-impulse
 ```
 
 Install dependencies using:
+
 ```bash
 yarn
 #or
-npm run
+npm install
 
 # .\packages\mobile
 yarn
 #or
-npm run
+npm install
+#or
+expo install
 ```
 
 First of all, you must create an OAuth application for each front-end project in github for authentication. Follow the github <a href="https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app" target="_blank">documentation</a> and add this data in the fields:
@@ -164,6 +175,7 @@ yarn prisma studio
 ```
 
 Run web:
+
 ```bash
 cd .\packages\web\
 yarn dev
@@ -172,6 +184,7 @@ npm run dev
 ```
 
 Run mobile:
+
 ```bash
 cd .\packages\mobile\
 yarn start
