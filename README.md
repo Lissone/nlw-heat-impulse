@@ -39,6 +39,7 @@ Developed at NLW Heat on the 2021 impulse trail, developed by Dani Leão on Octo
 
 - [Nodejs](https://nodejs.org/en/)
 - [Npm](https://www.npmjs.com/)
+- [Expo](https://expo.dev/)
 - [Yarn](https://yarnpkg.com/)
 
 ## Technologies
